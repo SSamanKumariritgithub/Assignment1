@@ -34,3 +34,17 @@ third = Node(30)
 second.next = third
 #linking next of the node with head
 third.next = MyList.head
+
+ #display the content of the list
+def PrintList(self):
+    temp = self.head
+    if(temp != None):
+      print("The list contains:", end=" ")
+      while (True):
+        print(temp.data, end=" ")
+        temp = temp.next
+        if(temp == self.head):
+          break
+      print()
+    else:
+      print("The list is empty.")
