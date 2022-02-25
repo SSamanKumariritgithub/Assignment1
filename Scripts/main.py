@@ -63,3 +63,24 @@ def insert_after_item(self, x, data):
                 if n.nref is not None:
                     n.nref.prev = new_node
                 n.nref = new_node
+
+# Insert before
+def insert_before_item(self, x, data):
+        if self.start_node is None:
+            print("List is empty")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                if n.item == x:
+                    break
+                n = n.nref
+            if n is None:
+                print("item not in the list")
+            else:
+                new_node = Node(data)
+                new_node.nref = n
+                new_node.pref = n.pref
+                if n.pref is not None:
+                    n.pref.nref = new_node
+                n.pref = new_node
