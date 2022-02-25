@@ -106,3 +106,16 @@ def delete_at_start(self):
             return
         self.start_node = self.start_node.nref
         self.start_prev = None;
+
+# Delete Element End
+def delete_at_end(self):
+        if self.start_node is None:
+            print("The list has no element to delete")
+            return 
+        if self.start_node.nref is None:
+            self.start_node = None
+            return
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        n.pref.nref = None
