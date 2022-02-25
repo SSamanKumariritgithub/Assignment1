@@ -9,3 +9,7 @@ class LinkedList:
   #constructor to create an empty LinkedList
   def __init__(self):
     self.head = None
+
+# test the code    
+# create an empty LinkedList                 
+MyList = LinkedList()
