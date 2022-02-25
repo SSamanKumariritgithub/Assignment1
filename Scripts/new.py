@@ -73,3 +73,6 @@ third = Node(30)
 second.next = third
 #linking next of the node with head
 third.next = MyList.head
+
+#print the content of list 
+MyList.PrintList()
