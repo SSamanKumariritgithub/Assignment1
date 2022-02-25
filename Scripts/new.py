@@ -48,3 +48,7 @@ def PrintList(self):
       print()
     else:
       print("The list is empty.")
+
+# test the code   
+# create an empty LinkedList                 
+MyList = LinkedList()
