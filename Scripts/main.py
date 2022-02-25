@@ -42,3 +42,24 @@ def insert_at_end(self, data):
         new_node = Node(data)
         n.nref = new_node
         new_node.pref = n
+
+# Insert after
+def insert_after_item(self, x, data):
+        if self.start_node is None:
+            print("List is empty")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                if n.item == x:
+                    break
+                n = n.nref
+            if n is None:
+                print("item not in the list")
+            else:
+                new_node = Node(data)
+                new_node.pref = n
+                new_node.nref = n.nref
+                if n.nref is not None:
+                    n.nref.prev = new_node
+                n.nref = new_node
