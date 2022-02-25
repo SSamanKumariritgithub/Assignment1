@@ -119,3 +119,34 @@ def delete_at_end(self):
         while n.nref is not None:
             n = n.nref
         n.pref.nref = None
+
+# Delete
+def delete_element_by_value(self, x):
+        if self.start_node is None:
+            print("The list has no element to delete")
+            return 
+        if self.start_node.nref is None:
+            if self.start_node.item == x:
+                self.start_node = None
+            else:
+                print("Item not found")
+            return 
+
+        if self.start_node.item == x:
+            self.start_node = self.start_node.nref
+            self.start_node.pref = None
+            return
+
+        n = self.start_node
+        while n.nref is not None:
+            if n.item == x:
+                break;
+            n = n.nref
+        if n.nref is not None:
+            n.pref.nref = n.nref
+            n.nref.pref = n.pref
+        else:
+            if n.item == x:
+                n.pref.nref = None
+            else:
+                print("Element not found")
