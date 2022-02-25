@@ -66,3 +66,10 @@ second = Node(20)
 first.next = second
 #linking next of the node with head
 second.next = MyList.head
+
+#Add third node.
+third = Node(30)
+#linking with second node
+second.next = third
+#linking next of the node with head
+third.next = MyList.head
