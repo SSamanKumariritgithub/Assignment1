@@ -13,3 +13,10 @@ class LinkedList:
 # test the code    
 # create an empty LinkedList                 
 MyList = LinkedList()
+
+#Add first node.
+first = Node(10)
+#linking with head node
+MyList.head = first
+#linking next of the node with head
+first.next = MyList.head
